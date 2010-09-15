@@ -1,0 +1,21 @@
+development:
+  domain: localhost:3000
+  report_recipient: example@example.com
+  report_sender: sender@example.com
+  smtp_settings:
+    address: smtp.example.com
+    port: 587
+    domain: localhost
+    user_name: example
+    password: example
+    authentication: plain
+    tls: true 
+test:
+  domain: test.host
+  report_recipient: example@example.com
+  report_sender: sender@example.com
+
+production:
+  domain: example.com
+  report_recipient: example@example.com
+  report_sender: sender@example.com

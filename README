@@ -1,0 +1,56 @@
+== Example Site using Groopbuyr Gem
+
+This is an example rails application that uses the Groopbuyr Gem.  The application provides
+rake tasks to pull new/updated deals from Groopbuy.com and pull the cities that Groopbuy.com
+has deals for.  
+
+This rails applications allows you to determine if you are interested in seeing deals or not interested and 
+uses this information to train the app to determine if new deals would be interesting to you or not.  The
+way I was using it was to identify health-related deals.  
+
+This was built to be internal application that is called by other web apps to pull in deals to enhance page content 
+through API calls.
+
+== Getting Started
+
+1. download and extract
+2. <tt>rake db:setup</tt>
+3. <tt>rake cities:fetch</tt>
+4. <tt>rake deals:fetch</tt>
+4. start the web server: <tt>script/server</tt> (run with --help for options)
+5. Go to http://localhost:3000/
+6. Mark deals that you are interested in.
+7. After future runs of <tt>rake deals:fetch</tt>, then run <tt>rake deals:relevance</tt>.
+
+== Gems Used
+
+* will_paginate
+* geokit
+* chronic
+* classifier
+* groopbuyr
+
+== Rake Tasks for App
+
+* rake cities:fetch
+* rake deals:fetch
+* rake deals:relevance
+
+== Configure Email settings for Relevance Report email
+
+1. Copy config/app_config.yml.sample to config/app_config.yml
+2. Open config/app_config.yml
+3. Then modify report_recipient, report_sender, smtp_settings and domain for each environment as necessary.
+
+== API calls for Application
+
+* http://localhost:3000/cities/hou/random_deal.[xml|json] => This will return a single random active deal from the city code (hou).  
+
+* http://localhost:3000/deals/near.[xml|json]?lat=[lat]&lng=[lng]&radius=[radius] => This will return a single random active deal within a certain radius of a latitude and longitude.  
+
+== Contact
+
+Dave Elkins
+dave@elkinsware.com
+http://daveelkins.com/
+

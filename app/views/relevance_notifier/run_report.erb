@@ -1,0 +1,9 @@
+========= RELEVANT =========
+<% @relevant_results.each do |result| %>
+  id: <%=result.id%> --- <%=result.headline%> --- <%=url_for(deal_url(result))%> | mark as not relevant: <%=url_for(mark_as_not_relevant_deal_url(result))%>
+<% end %>
+
+========= NOT RELEVANT =========
+<% @not_relevant_results.each do |result| %>
+  id: <%=result.id%> --- <%=result.headline%> --- <%=url_for(deal_url(result))%> | mark as relevant: <%=url_for(mark_as_relevant_deal_url(result))%>
+<% end %>

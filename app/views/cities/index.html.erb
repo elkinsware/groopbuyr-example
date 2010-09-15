@@ -1,0 +1,10 @@
+<% title "Cities" %>
+
+<ul>
+  <% for city in @cities %>
+    <% content_tag_for(:li, city) do %>
+      <h1><%=city.name%> (<%=city.code%>)</h1>
+      <h2>Number of Deals: <%=city.deals.active_deals.count%> (<%=link_to("view deals", city)%>)</h2>
+    <% end %>
+  <% end %>
+</ul>

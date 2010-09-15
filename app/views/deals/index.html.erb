@@ -1,0 +1,13 @@
+<% title "Deals" %>
+
+<p>
+  <strong>filter to:</strong> <%=link_to("relevant", deals_url(:filter => "relevant"))%> | <%=link_to("not_relevant", deals_url(:filter => "not_relevant"))%> | <%=link_to("not_marked", deals_url(:filter => "not_marked"))%> |<%=link_to("all", deals_url)%> 
+</p>
+
+<ul>
+<% for deal in @deals %>
+  <%= render(deal) %>
+<% end %>
+</ul>
+
+<%= will_paginate @deals if @deals.total_pages > 1 %>

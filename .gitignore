@@ -1,0 +1,11 @@
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# Config files #
+################
+app_config.yml
+database.yml
+gmaps_api_key.yml

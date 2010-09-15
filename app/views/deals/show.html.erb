@@ -1,0 +1,68 @@
+<% title "Deal" %>
+
+<p>
+  <strong>Source:</strong>
+  <%=h @deal.source %>
+</p>
+<p>
+  <strong>Expires At:</strong>
+  <%=h @deal.expires_at %>
+</p>
+<p>
+  <strong>Image:</strong>
+  <%=image_tag(@deal.image_url)%>
+</p>
+<p>
+  <strong>Headline:</strong>
+  <%=h @deal.headline %>
+</p>
+<p>
+  <strong>Time Zone:</strong>
+  <%=h @deal.time_zone %>
+</p>
+<p>
+  <strong>Url:</strong>
+  <%=link_to(@deal.url, @deal.url) %>
+</p>
+<p>
+  <strong>Amount:</strong>
+  <%=h @deal.amount %>
+</p>
+<p>
+  <strong>Source Url:</strong>
+  <%=h @deal.source_url %>
+</p>
+<p>
+  <strong>Value:</strong>
+  <%=h @deal.value %>
+</p>
+<p>
+  <strong>Source:</strong>
+  <%=h @deal.source_id %>
+</p>
+<p>
+  <strong>Relevant:</strong>
+  <%=h @deal.relevant %>
+</p>
+<p>
+  <strong>City Code:</strong>
+  <%=h @deal.city_code %>
+</p>
+<p>
+  <strong>City:</strong>
+  <%=h @deal.city.name %>
+</p>
+
+<p>
+  <% if @deal.relevant.nil? %>
+    <%= button_to "mark as relevant", mark_as_relevant_deal_path(@deal), :method => :put %> or
+    <%= button_to "mark as not relevant", mark_as_not_relevant_deal_path(@deal), :method => :put %>
+  <% elsif @deal.relevant %>
+    <%= button_to "mark as not relevant", mark_as_not_relevant_deal_path(@deal), :method => :put %>
+  <% else %>
+    <%= button_to "mark as relevant", mark_as_relevant_deal_path(@deal), :method => :put %>
+  <% end %>
+</p>
+<p>
+  <%= link_to "View All", deals_path %>
+</p>

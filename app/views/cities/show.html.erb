@@ -1,0 +1,13 @@
+<% title("#{@city.name} Deals")%>
+
+<ul class="deals" id="<%=@city.code%>_deals">
+<% for deal in @deals %>
+  <%= render(deal) %>
+<% end %>
+</ul>
+
+<%= will_paginate @deals if @deals.total_pages > 1 %>
+
+<p>
+  <%= link_to "View All Cities", cities_path %>
+</p>

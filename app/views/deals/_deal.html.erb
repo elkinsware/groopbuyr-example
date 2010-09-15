@@ -1,0 +1,32 @@
+  <% content_tag_for(:li, deal) do %>
+    <div class="row">
+      <h1><%=link_to(deal.headline, deal.url)%> <span class="source_link">(<%=link_to(deal.source, deal.source_url)%> in <%=deal.city.name%>)</span></h1>
+      <div class="column">
+        <%=image_tag(deal.image_url)%>
+      </div>
+      <div class="column grid_4">
+        <div class="expires_at"><%=distance_of_time_in_words(Time.now.utc, deal.expires_at)%> remaining</div>  
+        <div class="value left"><label>Value:</label><br /><%=number_to_currency(deal.value)%></div>
+        <div class="savings"><label>Savings:</label><br /><%=number_to_currency(deal.savings)%></div>
+        <div class="amount"><label>you pay </label> <%=number_to_currency(deal.amount)%></div>
+      </div>
+      <div class="column">              
+        <% if deal.relevant.nil? %>
+          <div class="column">
+            <%= button_to "mark as relevant", mark_as_relevant_deal_path(deal), :method => :put %> 
+          </div>
+          <div class="column">
+            <%= button_to "mark as not relevant", mark_as_not_relevant_deal_path(deal), :method => :put %>
+          </div>
+        <% elsif deal.relevant %>
+          <div class="column">
+            <%= button_to "mark as not relevant", mark_as_not_relevant_deal_path(deal), :method => :put %>
+          </div>
+        <% else %>
+          <div class="column">
+            <%= button_to "mark as relevant", mark_as_relevant_deal_path(deal), :method => :put %>
+          </div>
+        <% end %>      
+      </div>
+    </div>   
+  <% end %>

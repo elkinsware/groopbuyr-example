@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
+         Remove this if you use the .htaccess -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Groopbuyr Example Usage</title>
+    <meta name="description" content="Example Site using Groopbuyr Gem">
+    <meta name="author" content="dave elkins">
+
+    <meta name="csrf-token" content="<%= form_authenticity_token %>" />
+    <meta name="csrf-param" content="authenticity_token" />
+
+    <!--  Mobile Viewport Fix
+          j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag 
+          device-width : Occupy full width of the screen in its current orientation
+          initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
+          maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width
+    -->
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root of your domain and delete these references -->
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+
+
+    <!-- CSS : implied media="all" -->
+    <%= stylesheet_link_tag 'base', 'grid', 'application' %>
+
+    <!-- For the less-enabled mobile browsers like Opera Mini -->
+    <%= stylesheet_link_tag 'handheld', :media => "handheld" %>
+
+
+    <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
+    <%= javascript_include_tag 'modernizr-1.5.min' %>
+    
+    <%= yield(:head) %>
+  </head>
+
+  <body>
+    <div id="container">
+      <header>
+        <h1>Example Site using <a href="http://github.com/elkinsware/groopbuyr">Groopbuyr Gem</a></h1>
+      </header>
+      <div id="main">
+        <%- flash.each do |name, msg| -%>
+          <%= content_tag :div, msg, :id => "flash_#{name}" %>
+        <%- end -%>
+
+        <%- if show_title? -%>
+          <h1><%=h yield(:title) %></h1>
+        <%- end -%>
+
+        <%= yield %>
+      </div>
+      <footer>
+        <p>An example site using <a href="http://github.com/elkinsware/groopbuyr">groopbuyr gem</a> by <a href="http://daveelkins.com/">dave elkins</a></p>
+      </footer>
+    </div> <!--! end of #container -->
+    <!-- Javascript at the bottom for fast page loading -->
+
+    <%= javascript_include_tag 'plugins' %>
+    <%= javascript_include_tag 'rails','jquery-1.4.2.min', 'jquery.livequery.js', 'application' %>
+    <!--[if lt IE 7 ]>
+      <%= javascript_include_tag 'dd_belatedpng' %>
+    <![endif]-->
+    
+    <%= yield(:footer) %>
+  </body>
+</html>

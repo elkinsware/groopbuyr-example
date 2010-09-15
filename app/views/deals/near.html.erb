@@ -1,0 +1,9 @@
+<% title "deal" %>
+
+<ul class="deals" id="deals">
+  <% if @deal %>
+    <%= render(@deal) %>
+  <% else %>
+    <li><h2>Sorry, no deals</h2></li>
+  <% end %>
+</ul>

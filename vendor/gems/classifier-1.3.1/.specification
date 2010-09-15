@@ -1,0 +1,104 @@
+--- !ruby/object:Gem::Specification 
+name: classifier
+version: !ruby/object:Gem::Version 
+  prerelease: false
+  segments: 
+  - 1
+  - 3
+  - 1
+  version: 1.3.1
+platform: ruby
+authors: 
+- Lucas Carlson
+autorequire: classifier
+bindir: bin
+cert_chain: 
+date: 2008-01-19 00:00:00 -06:00
+default_executable: 
+dependencies: 
+- !ruby/object:Gem::Dependency 
+  name: stemmer
+  prerelease: false
+  requirement: &id001 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        segments: 
+        - 1
+        - 0
+        - 0
+        version: 1.0.0
+  type: :runtime
+  version_requirements: *id001
+description: A general classifier module to allow Bayesian and other types of classifications.
+email: lucas@rufy.com
+executables: []
+
+extensions: []
+
+extra_rdoc_files: []
+
+files: 
+- lib/classifier.rb
+- lib/classifier
+- lib/classifier/bayes.rb
+- lib/classifier/lsi.rb
+- lib/classifier/extensions
+- lib/classifier/extensions/string.rb
+- lib/classifier/extensions/vector.rb
+- lib/classifier/extensions/vector_serialize.rb
+- lib/classifier/extensions/word_hash.rb
+- lib/classifier/lsi
+- lib/classifier/lsi/content_node.rb
+- lib/classifier/lsi/summary.rb
+- lib/classifier/lsi/word_list.rb
+- bin/bayes.rb
+- bin/summarize.rb
+- test/bayes
+- test/bayes/bayesian_test.rb
+- test/test_helper.rb
+- test/extensions
+- test/extensions/word_hash_test.rb
+- test/lsi
+- test/lsi/lsi_test.rb
+- README
+- Rakefile
+- LICENSE
+- CVSROOT
+has_rdoc: true
+homepage: http://classifier.rufy.com/
+licenses: []
+
+post_install_message: 
+rdoc_options: []
+
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">"
+    - !ruby/object:Gem::Version 
+      segments: 
+      - 0
+      - 0
+      - 0
+      version: 0.0.0
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      segments: 
+      - 0
+      version: "0"
+requirements: 
+- A porter-stemmer module to split word stems.
+rubyforge_project: 
+rubygems_version: 1.3.7
+signing_key: 
+specification_version: 1
+summary: A general classifier module to allow Bayesian and other types of classifications.
+test_files: []
+
