@@ -6,7 +6,7 @@ has deals for.
 
 This rails applications allows you to determine if you are interested in seeing deals or not interested and 
 uses this information to train the app to determine if new deals would be interesting to you or not.  The
-way I was using it was to identify health-related deals.  
+way I was using it was to identify health related deals.  
 
 This was built to be internal application that is called by other web apps to pull in deals to enhance page content 
 through API calls.
@@ -14,13 +14,14 @@ through API calls.
 == Getting Started
 
 1. download and extract
-2. <tt>rake db:setup</tt>
-3. <tt>rake cities:fetch</tt>
-4. <tt>rake deals:fetch</tt>
-4. start the web server: <tt>script/server</tt> (run with --help for options)
-5. Go to http://localhost:3000/
-6. Mark deals that you are interested in.
-7. After future runs of <tt>rake deals:fetch</tt>, then run <tt>rake deals:relevance</tt>.
+2. Setup database.yml, app_config.yml and gmaps_api_key.yml by using the ".sample" files provided in config/
+3. <tt>rake db:setup</tt>
+4. <tt>rake cities:fetch</tt>
+5. <tt>rake deals:fetch</tt>
+6. start the web server: <tt>script/server</tt> (run with --help for options)
+7. Go to http://localhost:3000/
+8. Mark deals that you are interested in.
+9. After future runs of <tt>rake deals:fetch</tt>, then run <tt>rake deals:relevance</tt>.
 
 == Gems Used
 
