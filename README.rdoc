@@ -51,7 +51,7 @@ through API calls.
 
 == Contact
 
-Dave Elkins
-dave@elkinsware.com
+Dave Elkins  
+dave@elkinsware.com  
 http://daveelkins.com/
 
