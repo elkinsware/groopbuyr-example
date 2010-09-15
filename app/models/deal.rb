@@ -8,7 +8,7 @@ class Deal < ActiveRecord::Base
   named_scope :undetermined, :conditions => "deals.relevant IS NULL"
   
   named_scope :most_recent, :order => "deals.created_at DESC"
-  named_scope :active_deals, :conditions => ["deals.expires_at <= ?",Time.now.utc.to_s(:db)]
+  named_scope :active_deals, :conditions => ["deals.expires_at > ?",Time.now.utc.to_s(:db)]
     
   def savings
     @savings ||= (self.value - self.amount)

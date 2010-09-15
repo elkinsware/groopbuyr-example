@@ -20,16 +20,16 @@ class DealsController < ApplicationController
     #lat: 29.97  lng:  -95.35
     @lat = params[:lat].to_f
     @lng = params[:lng].to_f
-    @radius = params[:radius].to_i 
-    
-    @radius = 25 if @radius < 1
     
     if @lat and @lng
-      @deal = Deal.active_deals.relevant.find(:first, :origin => [@lat, @lng], :order => "rand()", :within => @radius)
+      @city = City.find_closest(:origin => [@lat, @lng])
+      @deal = @city.deals.active_deals.relevant.first(:order => "rand()")
     else
       return render( :status => 404 )
     end
-        
+    
+    return render( :status => 404 ) unless @deal
+  
     respond_to do |format|
       format.html
       format.xml {render :xml => @deal.to_xml}

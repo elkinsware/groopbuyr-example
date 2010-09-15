@@ -32,7 +32,7 @@ class CitiesController < ApplicationController
     
     return render(:status => 404) unless @city
         
-    @deal = @city.deals.active_deals.most_recent.find(:first, :order => "rand()")
+    @deal = @city.deals.active_deals.relevant.first(:order => "rand()")
     
     respond_to do |format|
       format.html

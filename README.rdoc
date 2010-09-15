@@ -47,7 +47,7 @@ through API calls.
 
 * http://localhost:3000/cities/hou/random_deal.[xml|json] => This will return a single random active deal from the city code (hou).  
 
-* http://localhost:3000/deals/near.[xml|json]?lat=[lat]&lng=[lng]&radius=[radius] => This will return a single random active deal within a certain radius of a latitude and longitude.  
+* http://localhost:3000/deals/near.[xml|json]?lat=[lat]&lng=[lng] => This will return a single random active deal near a given latitude and longitude.  
 
 == License
 
@@ -55,4 +55,4 @@ Released under the MIT license.
 
 == Contact
 
-My name is Dave Elkins.  You contact me at dave@elkinsware.com or check out my web site at http://daveelkins.com/  
+My name is Dave Elkins.  You contact me at dave@elkinsware.com or check out my web site at http://daveelkins.com/.  

@@ -4,7 +4,7 @@ sfo_zozi_deal:
   image_url: http://img.groopbuy.com/img5259.jpg
   expires_at: 2010-07-26 06:59:00
   city_code: SFO
-  updated_at: 2010-07-23 21:16:00
+  updated_at: 2010-07-25 06:59:00
   headline: 51% off a Wine Tasting, Gourmet Lunch and Hiking Tour ($85 Value)
   url: http://www.groopbuy.com/deal/more/5259/0268bcbc4abebb988265a323c6fde4cb
   source_url: http://www.zozi.com
@@ -14,13 +14,13 @@ sfo_zozi_deal:
   city_id: 1
   source: zozi
   source_id: bca28f98d0092b7151dc6d41f7fed218
-  created_at: 2010-07-23 21:16:00
+  created_at: 2010-07-25 06:59:00
 
 sfo_living_social_deal:
   image_url: http://img.groopbuy.com/img5924.jpg
-  expires_at: 2010-07-26 12:00:00
+  expires_at: <%=2.days.since.to_s(:db)%>
   city_code: SFO
-  updated_at: 2010-07-23 21:31:52
+  updated_at: <%=2.days.ago.to_s(:db)%>
   headline: "Gears and Grapes Getaways Wine Country Bike Tour: Includes Transportation to/from San Francisco, Bike, Lunch, and Four Winery Visits with Tastings"
   url: http://www.groopbuy.com/deal/more/5924/dacc1b3b24fe45100ddaffb1b1fe9c20
   source_url: http://www.livingsocial.com
@@ -30,14 +30,14 @@ sfo_living_social_deal:
   city_id: 1
   source: LivingSocial
   source_id: 073dd7a6ba0012ca5730bed35a5861df
-  created_at: 2010-07-23 21:31:52
+  created_at: <%=2.days.ago.to_s(:db)%>
   relevant: 1
   
 sfo_homerun_deal:
   image_url: http://img.groopbuy.com/img2611.jpg
-  expires_at: 2010-07-24 04:59:00
+  expires_at: <%=2.days.since.to_s(:db)%>
   city_code: SFO
-  updated_at: 2010-07-23 21:31:52
+  updated_at: <%=2.days.ago.to_s(:db)%>
   headline: Pledge Allegiance to The Republic - $2 Craft Brews Any Time Any Day... Before December 31
   url: http://www.groopbuy.com/deal/more/2611/782d5a2e336e85ff1acab461f0f4d78a
   source_url: http://www.homerun.com
@@ -47,14 +47,14 @@ sfo_homerun_deal:
   city_id: 1
   source: HomeRun
   source_id: 8b54ade827b9452c931d7b68fdbecc75
-  created_at: 2010-07-23 21:31:52
+  created_at: <%=2.days.ago.to_s(:db)%>
   relevant: 1
   
 sfo_homerun_deal_2:
   image_url: http://img.groopbuy.com/img4105.jpg
-  expires_at: 2010-07-24 04:59:00
+  expires_at: <%=2.days.since.to_s(:db)%>
   city_code: SFO
-  updated_at: 2010-07-23 21:31:52
+  updated_at: <%=2.days.ago.to_s(:db)%>
   headline: "Prost!: $2 for a Draft Beer at Schmidta's"
   url: http://www.groopbuy.com/deal/more/4105/ca07b5c94fb024bbda8c543a0a90fbd4
   source_url: http://www.homerun.com
@@ -64,14 +64,14 @@ sfo_homerun_deal_2:
   city_id: 1
   source: HomeRun
   source_id: bc1b28f9fdf2480f6b5d78f6b46c4d95
-  created_at: 2010-07-23 21:31:52
+  created_at: <%=2.days.ago.to_s(:db)%>
   relevant: 1
 
 sfo_homerun_deal_3:
   image_url: http://img.groopbuy.com/img4362.png
-  expires_at: 2010-07-24 05:00:00
+  expires_at: <%=2.days.since.to_s(:db)%>
   city_code: SFO
-  updated_at: 2010-07-23 21:31:53
+  updated_at: <%=2.days.ago.to_s(:db)%>
   headline: "Steady, Eddie: $2 for a Pint of Eddie Would Go Pale Ale at The Board Room ($5 value)"
   url: http://www.groopbuy.com/deal/more/4362/bfa5bf62f269ca1ceb8de15b472323d2
   source_url: http://www.homerun.com
@@ -81,14 +81,14 @@ sfo_homerun_deal_3:
   city_id: 1
   source: HomeRun
   source_id: f8f535ce35c35ff82cbc66a32b712066
-  created_at: 2010-07-23 21:31:52
+  created_at: <%=2.days.ago.to_s(:db)%>
   relevant: 0
   
 sfo_bloomspot_deal:
   image_url: http://img.groopbuy.com/img5446.jpg
-  expires_at: 2010-07-24 06:59:00
+  expires_at: <%=2.days.since.to_s(:db)%>
   city_code: SFO
-  updated_at: 2010-07-23 21:31:53
+  updated_at: <%=2.days.ago.to_s(:db)%>
   headline: Santa Ynez Inn $195/night for King Room ($295 value)
   url: http://www.groopbuy.com/deal/more/5446/b3f69662e2b66e6b11760f136b2b61b1
   source_url: http://www.bloomspot.com
@@ -98,5 +98,5 @@ sfo_bloomspot_deal:
   city_id: 1
   source: BloomSpot
   source_id: ca5febef6029c3e31088459a7395601e
-  created_at: 2010-07-23 21:31:52
+  created_at: <%=2.days.ago.to_s(:db)%>
   relevant: 0
