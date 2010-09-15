@@ -38,4 +38,23 @@ class DealsControllerTest < ActionController::TestCase
     assert_response :success
   end
   
+  def test_mark_as_relevant
+    put :mark_as_relevant, :id => deals(:sfo_zozi_deal).id
+    assert_response :redirect
+  end
+  
+  def test_mark_as_not_relevant
+    put :mark_as_not_relevant, :id => deals(:sfo_zozi_deal).id
+    assert_response :redirect
+  end
+  
+  def test_mark_as_relevant_js
+    xhr :put, :mark_as_relevant, :id => deals(:sfo_zozi_deal).id
+    assert_response :success
+  end
+  
+  def test_mark_as_not_relevant_js
+    xhr :put, :mark_as_not_relevant, :id => deals(:sfo_zozi_deal).id
+    assert_response :success
+  end
 end
