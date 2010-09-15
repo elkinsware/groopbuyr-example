@@ -49,6 +49,10 @@ through API calls.
 
 * http://localhost:3000/deals/near.[xml|json]?lat=[lat]&lng=[lng]&radius=[radius] => This will return a single random active deal within a certain radius of a latitude and longitude.  
 
+== License
+
+Released under the MIT license.
+
 == Contact
 
 Dave Elkins  
