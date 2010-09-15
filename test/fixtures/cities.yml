@@ -1,19 +1,5 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 #
-#one:
-#  name: MyString
-#  code: MyString
-#  state: MyString
-#  lat: 9.99
-#  lng: 9.99
-#
-#two:
-#  name: MyString
-#  code: MyString
-#  state: MyString
-#  lat: 9.99
-#  lng: 9.99
-
 sfo:
   id: 1
   name: San Fransico
@@ -21,3 +7,10 @@ sfo:
   lat: -122.4194155
   lng: 37.7749295
   state: CA
+hou:
+  id: 2
+  name: Houston
+  code: HOU
+  lat: 29.7628844
+  lng: -95.3830615
+  state: TX  

@@ -1,27 +1,5 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 #
-#one:
-#  source: MyString
-#  expires_at: 2010-07-22 16:03:47
-#  image_url: MyString
-#  headline: MyString
-#  time_zone: MyString
-#  url: MyString
-#  amount: 9.99
-#  source_url: MyString
-#  value: 9.99
-#
-#two:
-#  source: MyString
-#  expires_at: 2010-07-22 16:03:47
-#  image_url: MyString
-#  headline: MyString
-#  time_zone: MyString
-#  url: MyString
-#  amount: 9.99
-#  source_url: MyString
-#  value: 9.99
-
 sfo_zozi_deal:
   image_url: http://img.groopbuy.com/img5259.jpg
   expires_at: 2010-07-26 06:59:00

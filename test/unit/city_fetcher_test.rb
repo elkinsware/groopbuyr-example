@@ -1,9 +1,9 @@
 require 'test_helper'
 
-class GroopbuyCityFetcherTest < ActiveSupport::TestCase
+class CityFetcherTest < ActiveSupport::TestCase
   
   test "fetch" do
-    @fetcher = GroopbuyCityFetcher.new
+    @fetcher = CityFetcher.new
     @groopbuyr = GroopBuyr.new
     
     @fetcher.fetch

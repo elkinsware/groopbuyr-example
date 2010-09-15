@@ -11,9 +11,11 @@ class CitiesController < ApplicationController
   
   def show
     load_city
-    return render :status => 404 unless @city
     
-    @per_page = params[:per_page].to_i || 25
+    return render(:status => 404) unless @city
+    
+    @per_page = params[:per_page] ? params[:per_page].to_i : 25
+    @per_page = 25 if @per_page == 0
     @per_page = 100 if @per_page > 100
     
     @deals = @city.deals.active_deals.most_recent.paginate(:page => (params[:page] || 1), :per_page => @per_page)
@@ -27,7 +29,8 @@ class CitiesController < ApplicationController
 
   def random_deal
     load_city
-    return render :status => 404 unless @city
+    
+    return render(:status => 404) unless @city
         
     @deal = @city.deals.active_deals.most_recent.find(:first, :order => "rand()")
     

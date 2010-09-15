@@ -1,9 +1,9 @@
 require 'test_helper'
 
-class GroopbuyDealFetcherTest < ActiveSupport::TestCase
+class DealFetcherTest < ActiveSupport::TestCase
   
   test "fetch" do
-    @fetcher = GroopbuyDealFetcher.new
+    @fetcher = DealFetcher.new
     @groopbuyr = GroopBuyr.new
     
     @fetcher.fetch
