@@ -55,7 +55,6 @@ Released under the MIT license.
 
 == Contact
 
-Dave Elkins  
-dave@elkinsware.com  
-http://daveelkins.com/  
-
+Dave Elkins.  
+dave@elkinsware.com .   
+http://daveelkins.com/ .  
